@@ -13,9 +13,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 inset-x-0 z-50">
+    <header className="sticky top-0 z-50 border-b border-charcoal/5 bg-white/90 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 sm:px-8">
-        <a href="#" className="text-lg font-semibold tracking-tight text-cream">
+        <a href="#" className="text-lg font-semibold tracking-tight text-charcoal">
           Seattle Slap
         </a>
 
@@ -24,7 +24,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-cream/85 transition-colors hover:text-cream"
+              className="text-sm font-medium text-charcoal/70 transition-colors hover:text-charcoal"
             >
               {link.label}
             </a>
@@ -33,7 +33,7 @@ export default function Navbar() {
 
         <a
           href="#"
-          className="hidden rounded-full bg-orange px-5 py-2.5 text-sm font-semibold text-cream transition-colors hover:bg-orange-dark md:inline-block"
+          className="hidden rounded-full bg-orange px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-orange-dark md:inline-block"
         >
           Order Now
         </a>
@@ -43,7 +43,7 @@ export default function Navbar() {
           onClick={() => setIsOpen((open) => !open)}
           aria-expanded={isOpen}
           aria-label="Toggle navigation menu"
-          className="flex h-10 w-10 items-center justify-center rounded-full text-cream md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full text-charcoal md:hidden"
         >
           <svg
             width="22"
@@ -65,14 +65,14 @@ export default function Navbar() {
       </nav>
 
       {isOpen && (
-        <div className="mx-4 mt-2 rounded-2xl bg-charcoal/95 px-6 py-6 backdrop-blur md:hidden">
+        <div className="mx-4 mt-2 rounded-2xl border border-charcoal/5 bg-white px-6 py-6 shadow-lg shadow-charcoal/5 md:hidden">
           <div className="flex flex-col gap-5">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-base font-medium text-cream/85 transition-colors hover:text-cream"
+                className="text-base font-medium text-charcoal/70 transition-colors hover:text-charcoal"
               >
                 {link.label}
               </a>
@@ -80,7 +80,7 @@ export default function Navbar() {
             <a
               href="#"
               onClick={() => setIsOpen(false)}
-              className="mt-2 rounded-full bg-orange px-5 py-3 text-center text-sm font-semibold text-cream transition-colors hover:bg-orange-dark"
+              className="mt-2 rounded-full bg-orange px-5 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-orange-dark"
             >
               Order Now
             </a>

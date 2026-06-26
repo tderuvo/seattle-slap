@@ -134,7 +134,7 @@ export default function WhatIsASlap() {
           <div className="grid gap-12 sm:grid-cols-3 sm:gap-8">
             {STEPS.map(({ icon: Icon, title, description }) => (
               <div key={title} className="text-center sm:text-left">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-evergreen/10 text-evergreen sm:mx-0">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-orange/10 text-orange sm:mx-0">
                   <Icon />
                 </div>
                 <h3 className="mt-5 text-lg font-semibold text-charcoal">
